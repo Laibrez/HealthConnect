@@ -1,16 +1,114 @@
-# React + Vite
+# HealthConnect Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend application for HealthConnect, built with React, Vite, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Home View**: Hero section with feature cards
+- **Search View**: Clinic search with filters by specialty and location
+- **Chat View**: Conversational AI assistant for personalized recommendations
+- **Recommendations View**: Personalized clinic suggestions with compatibility scores
+- **Login View**: User authentication form
+- **Register View**: User registration form
+- **Responsive Design**: Mobile-friendly navigation and layouts
+- **Custom Theme**: Matcha Green (#10B981) and Sky Blue (#38BDF8) color scheme
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 19**: UI library
+- **Vite**: Build tool and dev server
+- **Tailwind CSS**: Utility-first CSS framework
+- **Lucide React**: Icon library
+- **ESLint**: Code linting
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js 18+ and npm
+
+### Installation
+
+```bash
+npm install
+```
+
+### Development
+
+Run the development server:
+
+```bash
+npm run dev
+```
+
+The app will be available at `http://localhost:5173`
+
+### Build
+
+Build for production:
+
+```bash
+npm run build
+```
+
+The built files will be in the `dist` directory.
+
+### Linting
+
+Run ESLint:
+
+```bash
+npm run lint
+```
+
+### Preview Production Build
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+## Project Structure
+
+```
+src/
+├── components/          # Reusable components
+│   ├── Navigation.jsx   # Main navigation bar
+│   └── Footer.jsx       # Footer component
+├── views/              # Page components
+│   ├── HomeView.jsx
+│   ├── SearchView.jsx
+│   ├── ChatView.jsx
+│   ├── RecommendationsView.jsx
+│   ├── LoginView.jsx
+│   └── RegisterView.jsx
+├── App.jsx             # Main app component with routing
+├── main.jsx            # Entry point
+└── index.css           # Global styles with Tailwind
+```
+
+## Color Scheme
+
+- **Primary (Matcha)**: `#10B981` - Used for primary actions and branding
+- **Secondary (Sky)**: `#38BDF8` - Used for secondary actions and accents
+
+## Components
+
+### Navigation
+- Sticky navigation bar with logo and menu items
+- Mobile-responsive with hamburger menu
+- Active state highlighting
+
+### Footer
+- Company information and branding
+- Quick links
+- Contact information
+
+### Views
+- **HomeView**: Landing page with hero and features
+- **SearchView**: Search and filter clinics with results
+- **ChatView**: Interactive chat with AI assistant
+- **RecommendationsView**: Top clinic recommendations
+- **LoginView**: Email/password login form
+- **RegisterView**: User registration with validation
